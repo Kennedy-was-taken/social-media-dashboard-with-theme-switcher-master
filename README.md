@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub code solution URL](https://github.com/Kennedy-was-taken/social-media-dashboard-with-theme-switcher-master)
-<!-- - Live site Url : [Vercel QR code app](https://product-list-with-cart-main-azure.vercel.app/) -->
+<!-- - Live site Url : [Vercel QR code app](https://social-media-dashboard-with-theme-switcher-master-ruby.vercel.app/) -->
 
 
 #### Mobile perspective:
