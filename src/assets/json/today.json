@@ -12,7 +12,7 @@
         "type": "Likes",
         "amount": "52",
         "percentage": 2,
-        "arrow": "../assets/images/icon-down.svg",
+        "arrow_icon": "../assets/images/icon-down.svg",
         "arrow_color": "--Bright_Red"
     },
     {
@@ -52,7 +52,7 @@
         "type": "Likes",
         "amount": "107",
         "percentage": 19,
-        "arrow": "../assets/images/icon-down.svg",
+        "arrow_icon": "../assets/images/icon-down.svg",
         "arrow_color": "--Bright_Red"
     },
     {
@@ -60,7 +60,7 @@
         "type": "Total Views",
         "amount": "1407",
         "percentage": 12,
-        "arrow": "../assets/images/icon-down.svg",
+        "arrow_icon": "../assets/images/icon-down.svg",
         "arrow_color": "--Bright_Red"
     }
 ]
