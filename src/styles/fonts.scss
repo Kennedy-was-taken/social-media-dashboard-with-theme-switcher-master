@@ -25,9 +25,14 @@
     src: url('../assets/fonts/Inter/static/Inter_24pt-Italic.ttf');
 }
 
+@font-face {
+    font-family: 'Inter_Light';
+    src: url('../assets/fonts/Inter/static/Inter_18pt-Light.ttf');
+}
+
 
 // defining mixing with three parameters
-@mixin font_style_Regular($size : 18px, $color : var(--Almost_Black), $weight : 400){
+@mixin font_style_Regular($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400){
     font-family: 'Inter_Regular';
     font-size: $size;
     font-weight: $weight;
@@ -35,29 +40,36 @@
 }
 
 
-@mixin font_style_SemiBold($size : 18px, $color : var(--Almost_Black), $weight : 400,){
+@mixin font_style_SemiBold($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400,){
     font-family: 'Inter_SemiBold';
     font-size: $size;
     font-weight: $weight;
     color: $color;
 }
 
-@mixin font_style_Bold($size : 18px, $color : var(--Almost_Black), $weight : 400){
+@mixin font_style_Bold($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400){
     font-family: 'Inter_Bold';
     font-size: $size;
     font-weight: $weight;
     color: $color;
 }
 
-@mixin font_style_VariableFont($size : 18px, $color : var(--Almost_Black), $weight : 400){
+@mixin font_style_VariableFont($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400){
     font-family: 'Inter_VariableFont';
     font-size: $size;
     font-weight: $weight;
     color: $color;
 }
 
-@mixin font_style_Italic($size : 18px, $color : var(--Almost_Black), $weight : 400){
+@mixin font_style_Italic($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400){
     font-family: 'Inter_Italic';
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin font_style_light($size : 18px, $color : var(--Very_Dark_Blue_Text), $weight : 400){
+    font-family: 'Inter_Light';
     font-size: $size;
     font-weight: $weight;
     color: $color;
