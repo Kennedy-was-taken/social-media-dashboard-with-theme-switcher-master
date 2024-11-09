@@ -1,0 +1,51 @@
+@import "../../styles/fonts.scss";
+@import "../../styles/device_dimensions.scss";
+
+@media (min-width: $desktops) {
+
+    .main_container {
+
+        .dashboardContainer {
+
+            .header {
+                font-size: 2rem !important;
+            }
+
+            .subHeading {
+                font-size: 1rem !important;
+            }
+
+            .mode_container {
+
+                position: absolute !important;
+                top: 4.8rem !important;
+                left: auto !important;
+                right: 2rem !important;
+
+                .mode {
+                    font-size: 1rem !important;
+                }
+
+            }
+            
+            .platform_container{
+                
+                display: grid !important;
+                grid-template-columns: auto auto auto auto !important;
+                row-gap: 1rem 1rem !important;
+
+                .block{
+                    padding: 1.5rem 1rem !important;
+                }
+            }
+
+            .overviw_container{
+                    
+                display: grid !important;
+                grid-template-columns: auto auto auto auto !important;
+
+            }
+        }
+    }
+
+}
