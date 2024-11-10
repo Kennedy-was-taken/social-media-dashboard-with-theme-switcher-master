@@ -5,7 +5,7 @@
         "amount": "87",
         "percentage": 3,
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green"
+        "arrow_color": "var(--Lime_Green)"
     },
     {
         "icon": "../assets/images/icon-facebook.svg",
@@ -13,7 +13,7 @@
         "amount": "52",
         "percentage": 2,
         "arrow_icon": "../assets/images/icon-down.svg",
-        "arrow_color": "--Bright_Red"
+        "arrow_color": "var(--Bright_Red)"
     },
     {
         "icon": "../assets/images/icon-instagram.svg",
@@ -21,7 +21,7 @@
         "amount": "5462",
         "percentage": 2257,
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green"
+        "arrow_color": "var(--Lime_Green)"
     },
     {
         "icon": "../assets/images/icon-instagram.svg",
@@ -29,7 +29,7 @@
         "amount": "52K",
         "percentage": 1375,
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green"
+        "arrow_color": "var(--Lime_Green)"
     },
     {
         "icon": "../assets/images/icon-twitter.svg",
@@ -37,7 +37,7 @@
         "amount": "117",
         "percentage": 303,
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green"
+        "arrow_color": "var(--Lime_Green)"
     },
     {
         "icon": "../assets/images/icon-twitter.svg",
@@ -45,7 +45,7 @@
         "amount": "507",
         "percentage": 553,
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green"
+        "arrow_color": "var(--Lime_Green)"
     },
     {
         "icon": "../assets/images/icon-youtube.svg",
@@ -53,7 +53,7 @@
         "amount": "107",
         "percentage": 19,
         "arrow_icon": "../assets/images/icon-down.svg",
-        "arrow_color": "--Bright_Red"
+        "arrow_color": "var(--Bright_Red)"
     },
     {
         "icon": "../assets/images/icon-youtube.svg",
@@ -61,6 +61,6 @@
         "amount": "1407",
         "percentage": 12,
         "arrow_icon": "../assets/images/icon-down.svg",
-        "arrow_color": "--Bright_Red"
+        "arrow_color": "var(--Bright_Red)"
     }
 ]

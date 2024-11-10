@@ -6,8 +6,9 @@
     flex-direction: column;
     background-color: var(--White_BG);
     width: 100%;
-    height: 100%;
+    height: fit-content;
     position: relative;
+    transition: 0.5s;
 
     .top_layer{
         background-color: var(--Very_Pale_Blue_Top_BG_Pattern);
@@ -19,6 +20,7 @@
         left: 0;
         border-bottom-left-radius: 1.5rem;
         border-bottom-right-radius: 1.5rem;
+        transition: 0.5s;
     }
 
     .dashboardContainer{
@@ -34,6 +36,7 @@
             @include font_style_Bold(1.8rem, black, 500);
             margin: 0;
             margin-bottom: 0.4rem;
+            transition: 0.5s;
         }
 
         .subHeading{
@@ -53,13 +56,63 @@
             display: flex;
             flex-direction: row;
             margin-bottom: 2rem;
+            align-items: center;
 
             .mode{
                 @include font_style_Bold(0.9rem, var(--Dark_Grayish_Blue_Text), 500);
                 margin: 0;
             }
 
-            
+            .slider_container{
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                height: 1.4rem;
+                width: 3.5rem;
+                background: var(--Toggle_light);
+                border-radius: 1rem;
+                margin-left: auto;
+                margin-right: 0;
+                align-items: center;
+                cursor: pointer;
+
+                .backend{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 1rem;
+                    position: absolute;
+                    background: transparent;
+                }
+
+                #color_mode{
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                .slider{
+                    position: absolute;
+                    background-color: #f0f3fc;
+                    left: 0.3rem;
+                    transition: 0.5s;
+                    height: 1rem;
+                    width: 1rem;
+                    transition: 0.5s;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                    z-index: 2;
+                }
+
+                #color_mode:checked ~ .slider{
+                    background-color: var(--Very_Dark_Blue_Top_BG_Pattern);
+                    transform: translateX(1.9rem);
+                }
+
+                #color_mode:checked ~ .backend{
+                    background: var(--Toggle_dark);
+                }
+
+            }
 
         }
 
@@ -67,56 +120,75 @@
             width: 100% !important;
             margin-bottom: 2rem !important;
 
-            .block{
+            .block_loop{
+                
                 display: flex;
                 flex-direction: column;
-                padding: 2rem 1rem;
-                justify-content: center;
-                align-items: center;
-                background-color: var(--Light_Grayish_Blue_Card_BG);
-                border-radius: 0.5rem;
-                border-top: 0.4rem solid var(--Facebook);
-                margin-bottom: 1.5rem;
+                width: 100%;
 
-                .icon{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 0.5rem;
-                    align-items: center;
-                    margin-bottom: 1rem;
+                .border{
+                    
+                    border-radius: 0.5rem;
+                    padding-top: 0.5rem;
+                    margin-bottom: 1.5rem;
+                    border-bottom-left-radius: 0.5rem;
+                    border-bottom-right-radius: 1rem;
 
-                    img{
-                        height: 1.5rem;
+                    .block{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 2rem 1rem;
+                        justify-content: center;
+                        align-items: center;
+                        background: var(--Light_Grayish_Blue_Card_BG);
+                        border-bottom-left-radius: 0.5rem;
+                        border-bottom-right-radius: 0.5rem;
+                        transition: 0.5s;
+        
+                        .icon{
+                            display: flex;
+                            flex-direction: row;
+                            gap: 0.5rem;
+                            align-items: center;
+                            margin-bottom: 1rem;
+        
+                            img{
+                                height: 1.5rem;
+                            }
+        
+                            .tag_name{
+                                @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text), 500);
+                                margin: 0;;
+                            }
+                        }
+        
+                        .follower_number{
+                            @include font_style_Bold(4.5rem, black, 500);
+                            margin: 0;
+                            transition: 0.5s;
+                        }
+        
+                        .follower_text{
+                            @include font_style_light(1rem, var(--Dark_Grayish_Blue_Text), 500);
+                            margin: 0;
+                            letter-spacing: 0.4rem;
+                            margin-bottom: 2rem;
+                        }
+        
+                        span{
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text), 500);
+                            gap: 0.3rem;
+                            img{
+                                height: 0.3rem;
+                            }
+                        }
+        
                     }
-
-                    .tag_name{
-                        @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text), 500);
-                        margin: 0;;
-                    }
                 }
 
-                .follower_number{
-                    @include font_style_Bold(4.5rem, black, 500);
-                    margin: 0;
-                }
-
-                .follower_text{
-                    @include font_style_light(1rem, var(--Dark_Grayish_Blue_Text), 500);
-                    margin: 0;
-                    letter-spacing: 0.4rem;
-                    margin-bottom: 2rem;
-                }
-
-                span{
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text), 500);
-                    gap: 0.3rem;
-                    img{
-                        height: 0.3rem;
-                    }
-                }
 
             }
         }
@@ -124,7 +196,8 @@
         .overview{
             margin: 0;
             margin-bottom: 2rem;
-            @include font_style_Bold(1.5rem, var(--Dark_Grayish_Blue_Text), 500)
+            @include font_style_Bold(1.5rem, var(--Dark_Grayish_Blue_Text), 500);
+            transition: 0.5s;
         }
 
         .overviw_container{
@@ -132,71 +205,81 @@
             flex-direction: column;
             width: 100%;
 
-            .overview_block{
+            .overview_loop{
+
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 1.5rem;
-                padding: 1.5rem 1.5rem;
-                background-color: var(--Light_Grayish_Blue_Card_BG);
-                border-radius: 0.5rem;
-                gap: 1.5rem;
+                margin-bottom: 1rem ;
 
-                p{
-                    margin: 0;;
-                }
-
-                .top, .bottom{
+                .overview_block{
                     display: flex;
-                    flex-direction: row;
-                }
-
-                .top{
-                    margin-top: 0;
-                    margin-bottom: auto;
-                    align-items: center;
-
-                    .page{
-                        @include font_style_Regular(0.8rem, var(--Dark_Grayish_Blue_Text), 600);
-                        margin-left: 0;
-                        margin-right: auto;
+                    flex-direction: column;
+                    padding: 1.5rem 1.5rem;
+                    background-color: var(--Light_Grayish_Blue_Card_BG);
+                    border-radius: 0.5rem;
+                    gap: 1.5rem;
+                    transition: 0.5s;
+    
+                    p{
+                        margin: 0;
                     }
-
-                    img{
-                        height: 1.5rem;
-                        margin-left: auto;
-                        margin-right: 0;
-                    }
-                }
-
-                .bottom{
-                    margin-top: auto;
-                    margin-bottom: 0;
-
-                    .number{
-                        @include font_style_Bold(1.8rem, black, 500);
-                        margin-left: 0;
-                        margin-right: auto;
-                    }
-
-                    .rate{
+    
+                    .top, .bottom{
                         display: flex;
                         flex-direction: row;
-                        margin-left: auto;
-                        margin-right: 0;
-                        gap: 0.3rem;
+                    }
+    
+                    .top{
+                        margin-top: 0;
+                        margin-bottom: auto;
                         align-items: center;
-
-                        img{
-                            height: 0.3rem;
+    
+                        .page{
+                            @include font_style_Regular(0.8rem, var(--Dark_Grayish_Blue_Text), 600);
+                            margin-left: 0;
+                            margin-right: auto;
+                            transition: 0.5s;
                         }
-
-                        p{
-                            @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text));
-
+    
+                        img{
+                            height: 1.5rem;
+                            margin-left: auto;
+                            margin-right: 0;
+                        }
+                    }
+    
+                    .bottom{
+                        margin-top: auto;
+                        margin-bottom: 0;
+    
+                        .number{
+                            @include font_style_Bold(1.8rem, black, 500);
+                            margin-left: 0;
+                            margin-right: auto;
+                            transition: 0.5s;
+                        }
+    
+                        .rate{
+                            display: flex;
+                            flex-direction: row;
+                            margin-left: auto;
+                            margin-right: 0;
+                            gap: 0.3rem;
+                            align-items: center;
+    
+                            img{
+                                height: 0.3rem;
+                            }
+    
+                            p{
+                                @include font_style_Bold(0.8rem, var(--Dark_Grayish_Blue_Text));
+    
+                            }
                         }
                     }
                 }
             }
+
         }
 
     }

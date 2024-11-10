@@ -5,8 +5,8 @@
         "followers": "1987",
         "amount": "12 Today",
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green",
-        "color": "--Facebook"
+        "arrow_color": "var(--Lime_Green)",
+        "color": "var(--Facebook)"
     },
     {
         "icon": "../assets/images/icon-twitter.svg",
@@ -14,8 +14,8 @@
         "followers": "1044",
         "amount": "99 Today",
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green",
-        "color": "--Twitter"
+        "arrow_color": "var(--Lime_Green)",
+        "color": "var(--Twitter)"
     },
     {
         "icon": "../assets/images/icon-instagram.svg",
@@ -23,16 +23,16 @@
         "followers": "11K",
         "amount": "1099 Today",
         "arrow_icon": "../assets/images/icon-up.svg",
-        "arrow_color": "--Lime_Green",
-        "color": "--Instagram"
+        "arrow_color": "var(--Lime_Green)",
+        "color": "var(--Instagram)"
     },
     {
         "icon": "../assets/images/icon-youtube.svg",
         "user": "@Nathan F",
-        "followers": "8239K",
+        "followers": "8239",
         "amount": "144 Today",
         "arrow_icon": "../assets/images/icon-down.svg",
-        "arrow_color": "--Bright_Red",
-        "color": "--YouTube"
+        "arrow_color": "var(--Bright_Red)",
+        "color": "var(--YouTube)"
     }
 ]

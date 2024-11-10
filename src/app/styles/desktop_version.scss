@@ -7,6 +7,8 @@
 
         .dashboardContainer {
 
+            padding: 4rem 10rem !important;
+
             .header {
                 font-size: 2rem !important;
             }
@@ -20,29 +22,54 @@
                 position: absolute !important;
                 top: 4.8rem !important;
                 left: auto !important;
-                right: 2rem !important;
+                right: 10rem !important;
+                gap: 1rem !important;
 
                 .mode {
                     font-size: 1rem !important;
                 }
 
             }
-            
-            .platform_container{
-                
+
+            .platform_container {
+
                 display: grid !important;
                 grid-template-columns: auto auto auto auto !important;
-                row-gap: 1rem 1rem !important;
+                gap: 1rem 1rem !important;
 
-                .block{
-                    padding: 1.5rem 1rem !important;
+                .block_loop {
+
+                    display: flex !important;
+                    flex-direction: row !important;
+
+                    .border {
+
+                        width: 100%;
+
+                        .block {
+                            padding: 1.5rem 1rem !important;
+                        }
+                    }
+
                 }
             }
 
-            .overviw_container{
-                    
+            .overviw_container {
+
                 display: grid !important;
                 grid-template-columns: auto auto auto auto !important;
+                gap: 1rem 1rem !important;
+
+                .overview_loop {
+                    display: flex !important;
+                    flex-direction: row !important;
+                    width: 100%;
+
+                    .overview_block{
+                        width: 100%;
+                    }
+                }
+
 
             }
         }

@@ -1,16 +1,15 @@
-
 <!-- main -->
- <main class="main_container">
+<main id="main_container" class="main_container">
 
   <!-- background colors -->
-  <div class="top_layer"></div>
+  <div id="top_layer" class="top_layer"></div>
 
   <section class="dashboardContainer">
 
     <!-- heading -->
-    <h1 class="header">Social Media DashBoard</h1>
+    <h1 id="header" class="header">Social Media DashBoard</h1>
     <p class="subHeading">Total Followers: 23,004</p>
-    
+
     <!-- divider -->
     <div class="line"></div>
 
@@ -18,58 +17,73 @@
     <div class="mode_container">
 
       <p class="mode">Dark Mode</p>
+
+      <label class="slider_container" (change)="switch_mode($event)">
+        <input id="color_mode" type="checkbox"/>
+        <div for="color_mode" class="backend"></div>
+        <div for="color_mode" class="slider"></div>
+      </label>
+
     </div>
 
     <!-- blocks -->
     <section class="platform_container">
 
-      <div class="block">
+      <div class="block_loop" *ngFor="let socials of social">
+        <div class="border" [style.background]="socials.color">
 
-        <!-- top -->
-        <div class="icon">
-
-          <img src="../assets/images/icon-facebook.svg"/>
-          <p class="tag_name">nathanf</p>
+          <div id="block" class="block">
+  
+            <!-- top -->
+            <div class="icon">
+  
+              <img [src]="socials.icon" />
+              <p class="tag_name">{{socials.user}}</p>
+            </div>
+  
+            <!-- middle -->
+            <p id="follower_number" class="follower_number">{{socials.followers}}</p>
+            <p class="follower_text">FOLLOWERS</p>
+  
+            <!-- bottom -->
+            <span [style.color]="socials.arrow_color">
+              <img [src]="socials.arrow_icon" />
+              {{socials.amount}}
+            </span>
+  
+          </div>
         </div>
-
-        <!-- middle -->
-        <p class="follower_number">1987</p>
-        <p class="follower_text">FOLLOWERS</p>
-
-        <!-- bottom -->
-        <span>
-          <img src="../assets/images/icon-up.svg"/>
-          12 Today
-        </span>
-
       </div>
 
     </section>
 
-    <h1 class="overview">Overview - Today</h1>
+    <h1 id="overview" class="overview">Overview - Today</h1>
 
     <!-- block container -->
     <section class="overviw_container">
 
       <!-- block -->
-      <div class="overview_block">
+      <div class="overview_loop" *ngFor="let current of today">
 
-        <div class="top">
-          <p class="page">Page Views</p>
-          <img src="../assets/images/icon-facebook.svg"/>
-        </div>
-
-        <div class="bottom">
-          <p class="number">87</p>
-          <div class="rate">
-            <img src="../assets/images/icon-down.svg"/>
-            <p>2%</p>
+        <div id="overview_block" class="overview_block">
+  
+          <div class="top">
+            <p class="page">{{current.type}}</p>
+            <img [src]="current.icon"/>
           </div>
+  
+          <div class="bottom">
+            <p id="number" class="number">{{current.amount}}</p>
+            <div class="rate">
+              <img [src]="current.arrow_icon"/>
+              <p [style.color]="current.arrow_color">{{current.percentage}}%</p>
+            </div>
+          </div>
+  
         </div>
-
       </div>
     </section>
 
   </section>
 
- </main>
+</main>
